@@ -1,0 +1,56 @@
+[
+        {
+            "name": "Pulsera de League of Legends",
+            "price": 15.99,
+            "description": "Pulsera de cuero con el logo de League of Legends grabado.",
+            "ratings": 4.5,
+            "images": [
+                {
+                    "public_id": "pulsera_lol_1",
+                    "url": "https://example.com/images/pulsera_lol_1.jpg"
+                },
+                {
+                    "public_id": "pulsera_lol_2",
+                    "url": "https://example.com/images/pulsera_lol_2.jpg"
+                }
+            ],
+            "category": "merchandising",
+            "seller": "GameStore",
+            "stock": 20,
+            "num_of_reviews": 15,
+            "reviews": []
+        },
+        {
+            "name": "Figura de Ekko",
+            "price": 29.99,
+            "description": "Figura de acción detallada de Ekko, el Caminante del Tiempo.",
+            "ratings": 4.8,
+            "images": [],
+            "category": "merchandising",
+            "seller": "GamerZone",
+            "stock": 12,
+            "num_of_reviews": 8,
+            "reviews": []
+        },
+        {
+            "name": "Aspecto Jhin Proyecto",
+            "price": 12.99,
+            "description": "Aspecto de Jhin en su línea Proyecto, con efectos especiales.",
+            "ratings": 4.9,
+            "images": [
+                {
+                    "public_id": "jhin_proyecto_1",
+                    "url": "https://example.com/images/jhin_proyecto_1.jpg"
+                },
+                {
+                    "public_id": "jhin_proyecto_2",
+                    "url": "https://example.com/images/jhin_proyecto_2.jpg"
+                }
+            ],
+            "category": "skins",
+            "seller": "SkinWorld",
+            "stock": 8,
+            "num_of_reviews": 18,
+            "reviews": []
+        }
+]
