@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'  //Maggie video#70
+import React, { useEffect, useState } from 'react'  //Mggie video#70
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Header from './components/layout/Header'

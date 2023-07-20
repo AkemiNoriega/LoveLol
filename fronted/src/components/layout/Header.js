@@ -27,7 +27,7 @@ const Header = () => {
                 <div className="col-12 col-md-3">
                     <div className="navbar-brand">
                         <Link to="/">
-                            <img src="/assets/logo.png"/>
+                        <img src="/images/logo.png" alt="logo" />
                         </Link>
                     </div>
                 </div>
@@ -66,19 +66,13 @@ const Header = () => {
                                 <Link className="dropdown-item text-danger" to="/" onClick={logoutHandler}>
                                     Logout
                                 </Link>
-
                             </div>
-
-
                         </div>
 
                     ) : !loading && <Link to="/login" className="btn ml-4" id="login_btn">Login</Link>}
-
-
                 </div>
             </nav>
         </Fragment>
     )
 }
-
 export default Header
