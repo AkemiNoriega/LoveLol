@@ -1,24 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import { Route } from 'express';
+
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  return ( //Maggie video 64 
+    <Router>                                       
+      <div className="App"> 
+        <Header /> 
+        <div className="container container-fluid">
+          <Route path="/" component={Home} exact />
+          <Route path="/search/:Keyword" component={Home} />
+          <Route path="/product/:id" component={ProductDetails} exact />
+        </div>
+        <Footer />
+      </div>
+    </Router> 
   );
 }
 
