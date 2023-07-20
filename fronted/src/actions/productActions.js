@@ -46,4 +46,4 @@ export const clearErrors = ( ) => async (dispatch) => {
 
 //productsCount en backend le falta una "s"
 
-//ver otra vez el video #61 en el minuto 5:13 para hacer cambios en el home hasta el 
+//ver otra vez el video #61 en el minuto 5:13 para hacer cambios en el home hasta el 10:03
