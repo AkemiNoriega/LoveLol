@@ -1,21 +1,21 @@
 import React, { Fragment } from 'react'
 import { Route, Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { useAlert } from 'react-alert'
-import { logout } from '../../actions/userActions'
-import Search from './Search'
+//import { useAlert } from 'react-alert'
+//import { logout } from '../../actions/userActions'
+//import Search from './Search'
 import '../../App.css'
 
 const Header = () => {
-    const alert = useAlert();
+    //const alert = useAlert();
     const dispatch = useDispatch();
 
     const { user, loading } = useSelector(state => state.auth)
     const { cartItems } = useSelector(state => state.cart)
 
     const logoutHandler = () => {
-        dispatch(logout());
-        alert.success('Logged out successfully.')
+        /* dispatch(logout()); */
+        console.log("aqui estuvo pedro")//alert.success('Logged out successfully.')
     }
 
     return (
@@ -29,10 +29,10 @@ const Header = () => {
                     </div>
                 </div>
 
-                <div className="col-12 col-md-6 mt-2 mt-md-0">
+               {/*  <div className="col-12 col-md-6 mt-2 mt-md-0">
                     <Route render={({ history }) => <Search history={history} />} />
                 </div>
-
+ */}
                 <div className="col-12 col-md-3 mt-4 mt-md-0 text-center">
                     <Link to="/cart" style={{ textDecoration: 'none' }} >
                         <span id="cart" className="ml-3">Cart</span>

@@ -7,21 +7,22 @@ import App from './App';
 import { Provider } from 'react-redux';
 import store from './store'
 
-import {position, transitions, Provider as AlertProvider} from 'react-alert'
-import AlertTemplate from 'react-alert-template-basic'
+//import {position, transitions, Provider as AlertProvider} from 'react-alert'
+//import AlertTemplate from 'react-alert-template-basic'
 
 const options = {
   timeout: 5000,
-  position: position.BOTTOM_CENTER,
-  transitions: transitions.SCALE
+  //position: position.BOTTOM_CENTER,
+  //transitions: transitions.SCALE
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store} >
-    <AlertProvider template={AlertTemplate} {...options}>
+   {/*  <AlertProvider template={AlertTemplate} {...options}>
       <App />
-    </AlertProvider>
+    </AlertProvider> */}
+    <App />
   </Provider>,
 );
 

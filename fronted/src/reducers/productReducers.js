@@ -9,7 +9,8 @@ import {
     CLEAR_ERRORS,
     
 
-} from '../constants/productConstants';
+} 
+from '../constants/productConstants';
 
 
 export const productsReducer = (state = {products:[]}, action) => {
@@ -53,10 +54,10 @@ export const productDetailsReducer = (state = {product : {} }, action ) => {
 
             }
 
-        case PRODUCT_DETAILS_SUCCESS:{
-                loading: false 
+        /* case PRODUCT_DETAILS_SUCCESS:{
+                loading: false  
                 product: action.payload
-            }
+            } */
 
 
         case PRODUCT_DETAILS_FAIL:

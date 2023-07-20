@@ -34,7 +34,7 @@ export const getProducts = ( ) => async (dispatch) => {
 
 }
 
-export const getProductsDetails = ( id) => async (dispatch) => {
+export const getProductsDetails = (id) => async (dispatch) => {
     try{
 
         dispatch({PRODUCT_DETAILS_REQUEST})

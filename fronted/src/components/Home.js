@@ -5,11 +5,11 @@ import 'rc-slider/assets/index.css'
 import MetaData from './layout/MetaData'
 import Product from './product/product'
 import { useDispatch, useSelector } from 'react-redux'
-import { useAlert } from 'react-alert'
+//import { useAlert } from 'react-alert'
 import { getProducts } from '../actions/productActions'
 
-const { createSliderWithTooltip } = Slider;
-const Range = createSliderWithTooltip(Slider.Range)
+/* const { createSliderWithTooltip } = Slider;
+const Range = createSliderWithTooltip(Slider.Range) */
 
 const Home = ({ match }) => {
 
@@ -22,22 +22,22 @@ const Home = ({ match }) => {
         'Merchandising',
         'Skins',  
     ]
-    const alert = useAlert();
+    //const alert = useAlert();
     const dispatch = useDispatch();
 
     const { loading, products, error, productsCount, resPerPage, filteredProductsCount } = useSelector(state => state.products)
 
     const keyword = match.params.keyword
 
-    useEffect(() => {
+   useEffect(() => {
         if (error) {
-            return alert.error(error)
+            return console.log("hola")//alert.error(error) 
         }
 
         dispatch(getProducts(keyword, currentPage, price, category, rating));
 
 
-    }, [dispatch, alert, error, keyword, currentPage, price, category, rating])
+    }, [dispatch, error, keyword, currentPage, price, category, rating])
 
     function setCurrentPageNo(pageNumber) {
         setCurrentPage(pageNumber)
@@ -62,7 +62,7 @@ const Home = ({ match }) => {
                                 <Fragment>
                                     <div className="col-6 col-md-3 mt-5 mb-5">
                                         <div className="px-5">
-                                            <Range
+                                           {/*  <Range
                                                 marks={{
                                                     1: `$1`,
                                                     1000: `$1000`
@@ -77,7 +77,7 @@ const Home = ({ match }) => {
                                                 }}
                                                 value={price}
                                                 onChange={price => setPrice(price)}
-                                            />
+                                            /> */}
 
                                             <hr className="my-5" />
 
