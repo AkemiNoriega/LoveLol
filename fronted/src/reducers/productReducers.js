@@ -1,10 +1,15 @@
+import { STATES } from 'mongoose';
 import {
     ALL_PRODUCTS_REQUEST,
     ALL_PRODUCTS_SUCCESS,
     ALL_PRODUCTS_FAIL,
+    PRODUCT_DETAILS_REQUEST,
+    PRODUCT_DETAILS_SUCCESS,
+    PRODUCT_DETAILS_FAIL,
     CLEAR_ERRORS,
+    
 
-  } from '../constants/productConstants';
+} from '../constants/productConstants';
 
 
 export const productsReducer = (state = {products:[]}, action) => {
@@ -26,12 +31,48 @@ export const productsReducer = (state = {products:[]}, action) => {
                     loading: false,
                     erorr: action.payload
                 }
+
             case CLEAR_ERRORS:
                 return{
                     ...state,
                     error:null
                 }
+
             default:
                 return state;
+    }
+}
+
+export const productDetailsReducer = (state = {product : {} }, action ) => {
+    switch(action.type) {
+
+        case PRODUCT_DETAILS_REQUEST:
+            return {
+                ...state,
+                loading: true
+
+            }
+
+        case PRODUCT_DETAILS_SUCCESS:{
+                loading: false 
+                product: action.payload
+            }
+
+
+        case PRODUCT_DETAILS_FAIL:
+                return {
+                    ...state,
+                    error: null
+    
+                }
+
+        case CLEAR_ERRORS:
+            return{
+                    ...state,
+                    error:null
+                }
+
+        default:
+            return state
     }
 }

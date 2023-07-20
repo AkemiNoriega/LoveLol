@@ -3,8 +3,7 @@ import Pagination from 'react-js-pagination'
 import Slider from 'rc-slider'
 import 'rc-slider/assets/index.css'
 import MetaData from './layout/MetaData'
-import Product from './product/Product'
-import Loader from './layout/Loader'
+import Product from './product/product'
 import { useDispatch, useSelector } from 'react-redux'
 import { useAlert } from 'react-alert'
 import { getProducts } from '../actions/productActions'
@@ -51,7 +50,7 @@ const Home = ({ match }) => {
 
     return (  
         <Fragment>
-            {loading ? <Loader /> : (
+            
                 <Fragment>
                     <MetaData title={'Buy Best Products Online'} />
 
@@ -171,7 +170,7 @@ const Home = ({ match }) => {
                     )}
 
                 </Fragment>
-            )}
+            
 
         </Fragment>
     )
